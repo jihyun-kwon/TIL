@@ -1,15 +1,13 @@
 import java.util.Scanner;
 
-public class reverseArray {
-    //배열 요소를 입력받고 역순 정렬하는 알고리즘 만들기
-    static int[] reverse(int[] arr) {
-        int temp;
-        for(int i=0; i<arr.length/2;i++){
-            temp = arr[i];
-            arr[i] = arr[arr.length-i-1];
-            arr[arr.length-i-1] = temp;
+public class sumOfArray {
+    //배열 요소를 입력받고 전체 합계 리턴하는 알고리즘 만들기
+    static int sumOf(int[] arr) {
+        int sum =0;
+        for(int i=0; i<arr.length;i++){
+            sum+=arr[i];
         }
-        return arr;
+        return sum;
     }
 
     public static void main(String[] args) {
@@ -20,10 +18,7 @@ public class reverseArray {
             arr[i] = scan.nextInt();
         }
 
-        int[] reversedArr = reverse(arr);
-
-        for (int reversedArray: reversedArr) {
-            System.out.print(reversedArray+ " ");
-        }
+        int result = sumOf(arr);
+        System.out.print("배열 전체 합 : " +result);
     }
 }
