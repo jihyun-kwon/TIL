@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>getElementById</title>
+</head>
+<h2>what can Js do?</h2>
+<p id="demo"> JS can change HTML attribute values (ex. image)</p>
+<p class="demo1">In this case JS changes the value of the src(source) attribute of an image.</p>
+<button type="button" onclick='document.getElementById("myImage").src="src/pic_bulboff.gif"'>Turn on the light off!</button>
+<image src="src/pic_bulboff.gif" id="myImage"></image>
+<button type="button" onclick='document.getElementById("myImage").src="src/pic_bulbon.gif"'>Turn on the light on!</button>
+<br>
+<button type="button" onclick="document.getElementById('myImage').style.display='none'">display none!</button>
+<button type="button" onclick="document.getElementById('myImage').style.display='block'">display block!</button>
+</body>
+</html>
