@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jsStatement</title>
+</head>
+<body>
+<h2>javascript statemsnts</h2>
+//컴퓨터 프로그램은 컴퓨터에 의해 지침, 실행할 목록입니다.
+//프로그래밍 언어에서 이러한 프로그래밍 명령어를 statement라고 합니다
+<p>자바스크립트 코드 블록은 { 와 } 의 사이에 쓰입니다</p>
+<button type="button" onclick="myFunction()">click me!</button>
+<p id="demo"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<script>
+    function myFunction(){
+        document.getElementById('demo').innerText="javascript statements";
+        document.getElementById('demo2').innerText="javascript statements222222222";
+    }
+    function myFunction2(a, b){
+        return a*b;
+    }
+    document.getElementById('demo3').innerHTML= myFunction2(5,10);
+</script>
+
+</body>
+</html>
