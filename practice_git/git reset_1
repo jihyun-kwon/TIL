@@ -5,3 +5,4 @@
 5
 
 before "git reset"
+after git rebase -i
