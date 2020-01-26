@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>map</title>
+</head>
+<body>
+<p id="demo"></p>
+<p id= 'demo2'></p>
+</body>
+<script>
+    // map : 전달받은 함수를 받아 새로운 배열을 반환
+    var color = ['red', 'blue', 'pink']
+    const myFunction = (color) => {
+       return color + ' is color'
+    }
+    let colorMap = color.map(myFunction)
+    document.getElementById('demo').innerHTML = colorMap
+</script>
+<script>
+    var fruits = ['apple', 'applemango', 'mango']
+    var fruitJuice = fruits.map((fruit) =>`${fruit} juice`);
+    document.getElementById('demo2').innerText = fruitJuice;
+</script>
+</html>
