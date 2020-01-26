@@ -8,7 +8,6 @@
 <p>List all array items, with keys and values : </p>
 <p id="demo"></p>
 <p id="demo2"></p>
-<p id="demo3"></p>
 
 <script>
     const fruits = [ '사과', '딸기', '파파야', '두리안']
@@ -26,7 +25,6 @@
     comments.forEach(addComments)
     function addComments (item, index, arr, thisValue) {
         return document.getElementById('demo2').innerHTML += item.id + '의 내용 : ' + item.comment + '<br>'
-        return document.getElementById('demo3').innerHTML += arr + '<br>' + thisValue
     }
 </script>
 </body>
