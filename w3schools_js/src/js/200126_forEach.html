@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>for each</title>
+</head>
+<body>
+<p>List all array items, with keys and values : </p>
+<p id="demo"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+
+<script>
+    const fruits = [ '사과', '딸기', '파파야', '두리안']
+    fruits.forEach(myFunction)
+    function myFunction (item, index) {
+        return document.getElementById('demo').innerHTML += index + 1 + '번째 과일의 이름은 ' + item + '입니다<br/>'
+    }
+</script>
+<script>
+    const comments = [
+        {id: 1, comment: '코멘트1입니다!'},
+        {id: 2, comment: '코멘트2입니다!'},
+        {id: 3, comment: '코멘트3입니다!'}
+    ]
+    comments.forEach(addComments)
+    function addComments (item, index, arr, thisValue) {
+        return document.getElementById('demo2').innerHTML += item.id + '의 내용 : ' + item.comment + '<br>'
+        return document.getElementById('demo3').innerHTML += arr + '<br>' + thisValue
+    }
+</script>
+</body>
+</html>
