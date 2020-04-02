@@ -1,11 +1,21 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <title>script Tag</title>
    <link rel="stylesheet" href="index.css">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 <body>
     <div id="app">
         <span v-if="seen">Now you see me</span>
+    </div>
+    <div id="app-4">
+        <ol>
+            <li v-for="todo in todos">
+                {{ todo.text }}
+            </li>
+        </ol>
     </div>
     <script src="index.js"></script>
 </body>
