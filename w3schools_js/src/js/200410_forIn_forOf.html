@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>for in Object, for of Array</title>
+</head>
+<body>
+<script>
+    // for (var in object) : 인덱스가 중요하지 않은 경우, 객체의 전체 순회를 하려면 for in 문을 쓴다
+    const personalInfo = {firstName: 'jihyun', familyName: 'kwon', age: 29, gender: 'female'};
+    console.log("personalInfo : ", personalInfo);
+    for (info in personalInfo) {
+        console.log(info, " : ", personalInfo[info]);
+    }
+
+    // for (var of iterable) : 반복 가능한 객체의 값을 반복.(array, string, map, node...)
+</script>
+</body>
+</html>
