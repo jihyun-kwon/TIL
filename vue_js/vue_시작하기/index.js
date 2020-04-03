@@ -32,10 +32,10 @@ var app_v_on= new Vue({
     }
 })
 
-var app_v_model = new Vue({
+var app = new Vue({
     el: "#app-v-model",
     data: {
-        message: "안녕하세요 Vue!"
+        message: "Vue!"
     }
 })
 
