@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>advanced reduce</title>
+</head>
+<body>
+<script>
+    // 객체배열에서의 값 합산
+    /* 객체로 이루어진 배열에 들어있는 값을 합산하기 위해, 반드시 초기값을 줘야함 */
+    var initialValue = 0;
+    var total = [{x:1},{x:2},{x:3}].reduce(function (acc, val) {
+        console.log("acc :", acc);
+        console.log("val :", val.x);
+        return acc + val.x
+    }, initialValue);
+    console.log("total : ", total);
+
+    // 배열이 비었는데도 initialValue도 제공하지 않으면 NaN이 뜨므로 초기값을 주는게 안전함
+    // 초기값없이 reduce()
+    console.log("maxCallback : ",[{x: 22}, {x: 42}].reduce((acc, cur) => Math.max(acc.x, cur.x))); // 이경우에만 정상출력
+    console.log("maxCallback_Obj : ",[{x: 22}, ].reduce((acc, cur) => Math.max(acc.x, cur.x))); // 값이없는배열 포함
+    //console.log("maxCallback_TYPEERROR : ",[ ].reduce((acc, cur) => Math.max(acc.x, cur.x))); // 빈배열 : Uncaught TypeError: Reduce of empty array with no initial value at Array.reduce
+
+    //map + reduce 조합으로 초기값없이 진행 가능하긴하나, 개인적으로 초기값을 추천함.
+    console.log("maxCallback_map_reduce : ", [{x: 22}, {x: 42}].map(item => item.x).reduce((max, cur) => Math.max(max, cur)));
+</script>
+</body>
+</html>
