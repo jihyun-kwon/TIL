@@ -21,6 +21,13 @@ console.log("concatArrPlusValues : ", arr1.concat([4,5,6])); // [1,2,3,4,5,6];
 
 // STRING CONCAT
 console.log("stringConcat : ", "red".concat(" apple", " is ","good"));
+
+// reduce와 concat과 spread syntax
+const arr = [1,2,[3,4,[5]]];
+console.log("arr.flat : ", arr.flat()); // [1,2,3,4,[5]];
+console.log("arr.reduce, concat : ",arr.reduce((acc, val) => acc.concat(val), [])); // [1,2,3,4,[5]];
+console.log("arr.spread : ", [].concat(...arr)); // [1,2,3,4,[5]];
+
 </script>
 </body>
 </html>
