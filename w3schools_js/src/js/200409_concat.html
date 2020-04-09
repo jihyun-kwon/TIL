@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>concat</title>
+</head>
+<body>
+<script>
+// concat 메서드는 인자로 주어진 배열이나 값들을, 기존 배열에 합쳐서 새 배열을 반환함
+// 배열 CONCAT 1. 3개의 배열을 이어붙이기
+const arr1 = [1,2,3];
+const arr2 = ["apple", "applemango", "mango"];
+const arr3 = ["red", "blue", "green"];
+
+const concatArr = arr1.concat(arr2, arr3);
+console.log("concatArr : ", concatArr);
+/* 결과값 : concatArr : (9) [1, 2, 3, "apple", "applemango", "mango", "red", "blue", "green"] */
+
+// 배열 CONCAT 2. 배열에 값을 이어붙이기
+console.log("concatArrPlusValues : ", arr1.concat([4,5,6])); // [1,2,3,4,5,6];
+
+// STRING CONCAT
+console.log("stringConcat : ", "red".concat(" apple", " is ","good"));
+</script>
+</body>
+</html>
