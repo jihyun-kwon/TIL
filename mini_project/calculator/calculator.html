@@ -74,8 +74,7 @@
         document.getElementById("display").value = displayVal + char;
     }
     function calculate(){
-        let displayVal = document.getElementById("display").value;
-        document.getElementById("result").value = eval(displayVal.substring(0, displayVal.length-1));
+        document.getElementById("result").value = eval(document.getElementById("display").value);
     }
     function removeAll(){
         document.getElementById("display").value = "";
