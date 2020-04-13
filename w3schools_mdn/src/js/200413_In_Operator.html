@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In operator</title>
+</head>
+<body>
+<script>
+    // in 연산자는 속성이 객체에 존재하면 true르 반환함
+    // syntax : var in obj
+    /* in Array */
+    var trees = new Array("redwood", "bluewood", "orangewood", "maple", "oak");
+    console.log("redwood" in trees); // false // 배열은 인덱스만 OK
+    console.log(1 in trees); // true //인덱스 1 존재함
+    console.log(5 in trees); // false // 인덱스 5 존재하지 않음
+    console.log(length in trees); // true // length 존재
+    console.log(trees);
+
+    /* in Object */
+    var personalInfo = {name: "jh", age: 29, country: "korean"};
+    console.log("name" in personalInfo); // true // 객체는 key만 OK
+    console.log(29 in personalInfo); // false // 값으로는 in operator 사용 불가능
+    console.log(personalInfo);
+</script>
+</body>
+</html>
