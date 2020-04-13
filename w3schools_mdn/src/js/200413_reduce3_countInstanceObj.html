@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>count instance in Obj using reduce()</title>
+</head>
+<body>
+<script>
+    // reduce 와 in operator를 사용해서 객체의 인스턴스를 카운트한다
+    var names = ['alice', 'bob', 'tiff', 'alice'];
+    var countedNames = names.reduce((allNames, names) => {
+        console.log(allNames); // 초기값 : {}
+        console.log(names); // 배열 첫번째 값 : alice
+        if(names in allNames){
+            allNames[names]++;
+        } else {
+            allNames[names] = 1;   // === {alice:1}
+        }
+        console.log(allNames); // {alice:1}
+        console.log(names); // alice
+        return allNames;
+    }, {});
+    console.log(countedNames);
+
+    // 1. names array를 객체로 초기화한다
+    // 2. in operator로 allNames[name]을 발견하면 1을 부여 (else문이 먼저)
+    // 3. allNames[name]이 두번째로 발견되면 1 증가 (if문이 다음)
+</script>
+</body>
+</html>
