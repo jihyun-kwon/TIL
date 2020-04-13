@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>reduce4_속성으로 객체 분류하기</title>
+</head>
+<body>
+<script>
+    var people = [{name: 'alice', age:12}, {name: 'bob', age: 32}, {name: 'john', age:25}, {name: 'pitter', age:12}];
+    function groupBy(objectArr, property) {
+        return objectArr.reduce((acc, obj) => {
+           var key = obj[property];
+            console.log("acc: ", acc);
+            console.log("obj: ", obj);
+           console.log("key: ", key);
+           if(!acc[key]){
+               acc[key] = [];
+           }
+            console.log("acc[key]: ", acc[key]);
+           acc[key].push(obj);
+           return acc;
+        }, {});
+    }
+
+    var sameAgePeople = groupBy(people, 'age'); // 객체의 value가 배열인데, 배열이 다시 객체들
+//{12: Array(2), 25: Array(1), 32: Array(1)}
+    /*  {
+    12 : [
+        {name: "alice", age: 12}
+        {name: "pitter", age: 12}],
+    25 : [{name: "john", age: 25}],
+    32 : [{name: "bob", age: 32}]
+    }
+    */
+    console.log(sameAgePeople);
+</script>
+</body>
+</html>
