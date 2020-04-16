@@ -1,5 +1,6 @@
 # TIL
-git Today I Learn 그날그날 배운 것들을 커밋하는 repository
+
+Today I Learn 그날그날 배운 것들을 커밋하는 repository
 
 
 2019/12~ : w3schools, mdn javascript
